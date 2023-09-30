@@ -1,6 +1,84 @@
 # Arduinoの使い方について
 Arduinoの使い方について記載します。
+
+## Arduinoの初期設定
+Arduinoの初期設定方法について説明します。
+
+### 1.構築イメージ
+![構築イメージ](../image/arduino/Initialset1.png "構築イメージ")
+PCにIDEをインストールし、 Arduinoへ処理の書き込みができる状態にします。
+
+### 2.Arduino組み立て
+![Arduino組み立て](../image/arduino/Initialset2.png "Arduino組み立て")
+ArduinoにUSBの部品をさすだけです。
+
+### 3.IDEインストール手順
+[公式ページ](https://www.arduino.cc/en/Guide/Windows)へアクセスします。
+
+![インストール1](../image/arduino/Initialset3.png "インストール1")
+対象のPCにあったリンクを押します。  
+画像はWindows用のものを選択しています。
+
+![インストール2](../image/arduino/Initialset4.png "インストール2")
+赤四角で囲んであるところをクリックするとダウンロードが始まります。
+
+![インストール3](../image/arduino/Initialset5.png "インストール3")
+exeファイルを実行するとインストールが始まります。
+
+![インストール4](../image/arduino/Initialset6.png "インストール4")
+設定はデフォルトで問題ないので進んでいきます。  
+必要時カスタムしてください。
+
+![インストール5](../image/arduino/Initialset7.png "インストール5")
+
+![インストール6](../image/arduino/Initialset8.png "インストール6")
+
+![インストール7](../image/arduino/Initialset9.png "インストール7")
+
+![アルディーノアイコン](../image/arduino/Initialset10.png "アルディーノアイコン")
+
+インストール後、ディスクトップにアイコンが出現します。(設定を変えなかった場合。)  
+こちらをクリックするとエディタが起動します。
+
+![エディタ1](../image/arduino/Initialset11.png "エディタ1")
+
+無事起動できたらインストール作業は完了です。  
+先ほど組み立てたArduinoをPCに接続します。
+
+![アルディーノランプ](../image/arduino/Initialset12.jpg "アルディーノランプ")
+接続するとランプが光ります。
+
+### 4.IDEの設定
+![設定変更](../image/arduino/Initialset13.png "設定変更")
+接続の設定をします。  
+ツール→シリアルポート→接続先の設定を押せばOKです。  
+
+### 5. Arduinoへデータ書き込み
+![サンプルコード](../image/arduino/Initialset14.png "サンプルコード")
+サンプルコードを表示させます。  
+スケッチ例→01.Basics→Blinkを選択します。
+
+![サンプルコード2](../image/arduino/Initialset15.png "サンプルコード2")
+サンプルコードが表示されます。
+```
+void setUp() {
+  pinMode(LED_BUILIN,OUTPUT); // 組み込みLEDに出力
+}
+
+void loop() {
+  digitalWrite(LED_BUILIN,HIGH); // 組み込みLEDに出力ON
+  delay(1000); // 1秒待つ
+  digitalWrite(LED_BUILIN,LOW); // 組み込みLEDに出力OFF
+  delay(1000); // 1秒待つ
+}
+```
+
+![書き込み方法](../image/arduino/Initialset16.png "書き込み方法")
+スケッチ→マイコンボードに書き込む で書き込み作業は終わりです。  
+Delayに指定されている1秒ごとにLEDランプが点滅していたらチェックOKです。
+
 ## Arduinoとブレッドボード
+Arduinoとブレッドボードの連携方法の説明をします。
 ### 1.この作業の使用物品
 ![ブレッドボード](../image/arduino/breadboard1.jpg "ブレッドボード")
 ブレッドボード
