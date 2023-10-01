@@ -7,4 +7,5 @@
 Arduino
 
 ## 下記ディレクトリ配下にも説明があります。
-Arduino
+[Arduinoの使い方](Arduino/README.md)
+
